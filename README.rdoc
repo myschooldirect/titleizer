@@ -21,6 +21,9 @@ Oh, one last, last thing, there are self-updating versions as well: String#title
 
 For plain Ruby, simply install the gem and you're good to go.
 
+  sudo gem sources -a http://gems.github.com
+  sudo gem install harukizaemon-titleizer
+
 For Rails, update environment.rb to include the gem:
 
   config.gem "harukizaemon-titleizer", :lib => "titleizer", :source => "http://gems.github.com"
