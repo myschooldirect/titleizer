@@ -1,0 +1,30 @@
+= Titleizer
+
+Titleizer is a gem that adds String#titleize (aliased as String#titlecase) to perform smart capitalisation of titles:
+
+  "terms of reference".titleize # => "Terms of Reference"
+  "my name is barron von sampy pants and you shall refer to me as such".titleize # => "My Name is Barron Von Sampy Pants and You Shall Refer to Me as Such"
+
+Titleizer also converts underscores and dashes to spaces:
+
+  "a-slug-from-a-url".titleize  # => "A Slug From a Url"
+
+Titleizer also preserves the capitalisation of any word it would capitalise itself:
+
+  "THIS IS A TITLE".titleize  # => THIS is a TITLE"
+
+And lastly, String#titleize is aliased as String#titlecase.
+
+Oh, one last, last thing, there are self-updating versions as well: String#titleize!, and String#titlecase!
+
+== Installation
+
+For plain Ruby, simply install the gem and you're good to go.
+
+For Rails, update environment.rb to include the gem:
+
+  config.gem "harukizaemon-titleizer", :lib => "titleizer", :source => "http://gems.github.com"
+
+=== License
+
+This plugin is copyright 2009 Simon Harris and is released under the MIT license.
