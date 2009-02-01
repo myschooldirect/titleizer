@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = "titleizer"
-  s.version  = "1.0.1"
-  s.date     = "2009-02-01"
+  s.version  = "1.0.2"
+  s.date     = "2009-02-02"
   s.summary  = "Smart capitalisation of titles"
   s.email    = "haruki.zaemon@gmail.com"
   s.homepage = "http://github.com/harukizaemon/titleizer"
@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
   s.authors  = ["Simon Harris"]
   s.files    = ["CHANGELOG.rdoc",
-                "MIT-LICENSE",
+                "Rakefile",
                 "README.rdoc",
                 "titleizer.gemspec",
                 "lib/titleizer.rb",
-                "lib/haruki_zaemon/titleizer/string.rb"]
+                "spec/haruki_zaemon/titleizer/string_spec.rb"]
   s.rdoc_options = ["--main", "README.rdoc"]
   s.extra_rdoc_files = ["CHANGELOG.rdoc", "README.rdoc"]
 end

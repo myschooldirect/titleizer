@@ -1,3 +1,7 @@
+== 1.0.2 released 2009-02-02
+
+* Added rudimentary specs.
+
 == 1.0.1 released 2009-02-01
 
 * Initial revision adapted almost entirely from code written by Marshall Elfstrand (http://vengefulcow.com/titlecase/) with some minor changes here and there to package it as a gem.
