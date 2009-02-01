@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "titleizer"
-  s.version  = "1.0.0"
+  s.version  = "1.0.1"
   s.date     = "2009-02-01"
   s.summary  = "Smart capitalisation of titles"
   s.email    = "haruki.zaemon@gmail.com"
