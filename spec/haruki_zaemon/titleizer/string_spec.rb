@@ -34,6 +34,16 @@ describe String do
     end
   end
   
+  describe "with punctuation replacement disabled" do
+    before do
+      HarukiZaemon::Titleizer.replace_punctuation = false
+    end
+    
+    it "should not convert '-' to spaces" do
+      "Southend-on-Sea".titleize.should == "Southend-on-Sea"
+    end
+  end
+  
   describe "#titleize!" do
     it "should replace the contents of the string" do
       original = "have a nice day"

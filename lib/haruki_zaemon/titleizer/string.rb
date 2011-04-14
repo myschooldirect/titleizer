@@ -18,13 +18,19 @@
 #
 module HarukiZaemon
   module Titleizer
+    class << self
+      attr_accessor :replace_punctuation
+    end
+    self.replace_punctuation = true
+    
     module String
       SMALL_WORDS = %w( is a an and as at but by en for if in of on or the to v[.]? via vs[.]? )
       SMALL_RE = SMALL_WORDS.join('|')
 
       def titleize
         result = ""
-        self.gsub(/[_-]/, ' ').split(/( [:.;?!][ ] | (?:[ ]|^)["“] )/x).each do |s|
+        with_puntuation_replaced = Titleizer.replace_punctuation ? self.gsub(/[_-]/, ' ') : self
+        with_puntuation_replaced.split(/( [:.;?!][ ] | (?:[ ]|^)["“] )/x).each do |s|
           s.gsub!(/ \b( [[:alpha:]] [[:lower:].'’]* )\b /x) do |w|
             # Skip words with inresult dots, e.g. "del.icio.us" or "example.com"
             (w =~ / [[:alpha:]] [.] [[:alpha:]] /x) ? w : w.capitalize
